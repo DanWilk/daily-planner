@@ -8,14 +8,14 @@ $('#currentDay')
 var auditTask = function(index, taskEl) {
     var time = $(taskEl).attr('data-hour');
     
-    var hour = moment(time, 'H');
+    var hour = moment(time, 'HH');
   
     $('#' + index).removeClass('past present future')
     
-    if (moment().isSame(hour)) {
+    if (moment().isSame(hour, 'hour')) {
         $('#' + index).addClass('present');
     }
-    else if (moment().isAfter(hour)) {
+    else if (moment().isAfter(hour, 'hour')) {
         $('#' + index).addClass('past');
     }
     else if (moment().isBefore(hour)) {

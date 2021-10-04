@@ -3,8 +3,10 @@ var counter = 0;
 
 
 // change colors based on hour
-$('#currentDay')
-.text(moment().format('ddd, MMM Do YYYY'));
+var findDay = function () {
+    $('#currentDay')
+    .text(moment().format('ddd, MMM Do YYYY'));
+}
 
 var auditTask = function(index, taskEl) {
     var time = $(taskEl).attr('data-hour');
@@ -30,39 +32,39 @@ $('.set').each(function(index, el) {
 
 });
 
-$('.col-10').on('click', function(){
+$('.col-md-10').on('click', function(){
     var text= $(this)
     .text()
     .trim();
   
     var textInput = $('<textarea>')
     .val(text)
-    .attr('data-hello', counter)
+    .attr('data-hello', counter);
     
-    var close = $(this).closest('.row')
+    var close = $(this).closest('.row');
 
-    var sample = close.children('.button-selector')
+    var sample = close.children('.button-selector');
 
-    var sample2 = sample.children('button')
+    var sample2 = sample.children('button');
 
-    sample2.attr('data-selector', counter)
+    sample2.attr('data-selector', counter);
 
-    var replaced = close.find('.text-area')
+    var replaced = close.find('.text-area');
 
     replaced.replaceWith(textInput);
     textInput.trigger('focus');
 
-    counter++
+    counter++;
   });
 
   $('.btn').on('click', function() {
-    var done = $(this).attr('data-selector')
+    var done = $(this).attr('data-selector');
     
     var text = $('textarea[data-hello="' + done + '"]')
     .val()
     .trim();
 
-    var done = $(this).attr('data-selector')
+    var done = $(this).attr('data-selector');
   
     var taskP = $('<div>')
     .addClass('m-1')
@@ -85,15 +87,13 @@ var saveToStorage = function() {
               .find('#' + index)
               .text()
               .trim();
-              console.log(text)  
 
             tempArr.push({
                 text: text
-            }) 
+            });
     }
-    console.log(tempArr)
 
-    events = tempArr
+    events = tempArr;
 
     saveEvents()
 }
@@ -102,24 +102,27 @@ var loadEvents = function() {
   
     // if nothing in localStorage, create a new object to track all task status arrays
     if (!events) {
-      events = []
+      events = [];
     }
-    console.log(events);
 
     for (index = 0; index < events.length; index++) {
         var text = events[index].text;
         
         var choice = $('#' + index)
-        .find('div')
+        .find('div');
 
-        choice.text(text)
+        choice.text(text);
 
     }
 }
    
-
+findDay();
 loadEvents();
 
 setInterval(function() {
     auditTask();
   }, 30000);
+
+  setInterval(function() {
+    findDay();
+  }, (1000 * 60) * 60);

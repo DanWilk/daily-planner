@@ -18,6 +18,9 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" 
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -29,10 +32,110 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='9'> 
+          <p>9 am</p>
+        </div>
+        <div class='col-10' id='0'>
+          <p>This is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      </br>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='10'> 
+          <p>10 am</p>
+        </div>
+        <div class='col-10' id='1'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='11'> 
+          <p>11 am</p>
+        </div>
+        <div class='col-10' id='2'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='12'> 
+          <p>12 pm</p>
+        </div>
+        <div class='col-10' id='3'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='13'> 
+          <p>1 pm</p>
+        </div>
+        <div class='col-10' id='4'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='14'> 
+          <p>2 pm</p>
+        </div>
+        <div class='col-10' id='5'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='21'> 
+          <p>3 pm</p>
+        </div>
+        <div class='col-10' id='6'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-1 set hour' data-hour='22'> 
+          <p>4 pm</p>
+        </div>
+        <div class='col-10' id='7'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
+      <div class='row '>
+        <div class='col-1 set hour' data-hour='23'> 
+          <p>5 pm</p>
+        </div>
+        <div class='col-10' id='8'>
+          <p>this is a sample task.</p>
+        </div>
+        <div class='col-1 button-selector saveBtn'>
+          <button class='btn'><span class="oi oi-folder"></span></button>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src='./script/script.js'></script>
   </body>
 </html>
